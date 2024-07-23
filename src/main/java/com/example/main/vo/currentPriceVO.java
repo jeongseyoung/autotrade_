@@ -11,7 +11,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class currentPriceVO {
+public class CurrentPriceVO {
 
     private String market;
     private String trade_date;

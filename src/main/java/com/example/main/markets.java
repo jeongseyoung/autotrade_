@@ -11,7 +11,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 @Slf4j
-public class markets {
+public class Markets {
     /*
      * 마켓에 있는 모든 코인 가져오기
      */

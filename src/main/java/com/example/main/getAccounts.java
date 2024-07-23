@@ -20,11 +20,11 @@ import java.io.IOException;
  * 나의 전체 보유 자산 조회
  */
 @Slf4j
-public class getAccounts {
+public class GetAccounts {
     private static final String ACCESS_KEY = "";
     private static final String SECRET_KEY = "";
 
-    public static void main(String[] args) throws ClientProtocolException, IOException {
+    public String getAccounts() throws ClientProtocolException, IOException {
 
         String token = JWTTokenGenerator.generateToken(ACCESS_KEY, SECRET_KEY);
 
@@ -39,11 +39,13 @@ public class getAccounts {
             JsonNode result = objectMapper.readTree(EntityUtils.toString(response.getEntity()));
             // System.out.println("result: " + result);
             log.info(result.toString());
+            return result.toString();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             httpClient.close();
         }
+        return "Check your Info.";
     }
 
 }
