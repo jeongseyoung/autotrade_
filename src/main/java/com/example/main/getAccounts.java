@@ -21,8 +21,8 @@ import java.io.IOException;
  */
 @Slf4j
 public class getAccounts {
-    private static final String ACCESS_KEY = "qwibojLwX90CBNpka3HY2aGxwPLg25Hr0CpbGwPw";
-    private static final String SECRET_KEY = "1BlG9qjJxS7xO5GD1Pt2xySAQr51SiAYnj95EuGN";
+    private static final String ACCESS_KEY = "";
+    private static final String SECRET_KEY = "";
 
     public static void main(String[] args) throws ClientProtocolException, IOException {
 
