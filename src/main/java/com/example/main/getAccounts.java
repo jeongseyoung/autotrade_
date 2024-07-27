@@ -8,7 +8,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 //import org.json.JSONObject;
 
-import com.example.main.utils.JWTTokenGenerator;
+import com.example.main.utils.JWTGenerator;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -26,7 +26,7 @@ public class GetAccounts {
 
     public String getAccounts() throws ClientProtocolException, IOException {
 
-        String token = JWTTokenGenerator.generateToken(ACCESS_KEY, SECRET_KEY);
+        String token = JWTGenerator.generateToken(ACCESS_KEY, SECRET_KEY);
 
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpGet request = new HttpGet("https://api.upbit.com/v1/accounts");
